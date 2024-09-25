@@ -8,28 +8,6 @@ let cityWind = document.getElementById("city-wind");
 let weather_img = document.querySelector("body");
 let humi_img = document.getElementById("img1")
 let wind_img = document.getElementById("img2")
-// let apiKey = "45016e553aa4401c878104740242309";
-
-// as we know the data is coming form an api means a network so the data is not gonna come instantly we have to use promises so we gonna create an async function getData inside which we gonna call an api
-// async function getData(cityName) {
-//   // This fetch is gonna return a promise when we await it
-//   const promise = await fetch(
-//       `http://api.weatherapi.com/v1/current.json?key=45016e553aa4401c878104740242309&q=${cityName}&aqi=yes`
-//     );
-//       return await promise.json();
-// }
-// btn.addEventListener("click", async() => {
-//     //getting the input which is user going to enter
-//     const value = city.value;
-//     //calling the getData function and passing it the value of user input but this getData is also going to return promise so let make it async
-//     let result = await getData(value);
-//     console.log(result);
-//      cityName.innerText = `${result.location.name}, ${result.location.country}`;
-//     cityTime.innerText = ` ${result.location.localtime}`
-//     cityTemp.innerText = ` ${result.current.temp_c} °C`;
-//     cityhumidity.innerText = `Humidity : ${result.current.humidity}`;
-//     cityWind.innerText = `Wind kph : ${result.current.wind_kph}`;
-// });
 
 async function getData2(city) {
   const api_key = "ce2e6aa3315e4fa7a143dc4298493e56";
@@ -42,6 +20,7 @@ async function getData2(city) {
   if (weather_data.cod === `404`) {
     cityName.innerText = `Sorry location not found`;
     weather_img.style = "background-color : #97d6df";
+    cityTemp.innerText = ``;
     return;
   }
   cityTemp.innerText = `${Math.round(weather_data.main.temp - 273.15)}°C`;
