@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body style="background-image: url('./images/bg-2.png'); object-fit: cover; background-repeat: no-repeat; background-size: cover;">
+    <div class="container">
+      <div class="Search">
+        <input
+          id="loc-name"
+          type="text"
+          placeholder="Enter City/Country"
+        />
+        <button id="search-btn">Search</button>
+      </div>
+
+      <div class="info">
+        <div class="location">
+        <h3 id="city-name">City, Country</h3>
+        <h5 id="city-time"></h5>
+        <p id="city-temp"></p>
+        <!-- <img src="" alt="" id="error-img"> -->
+        </div>
+
+        <div class="wind-humi">
+
+          <div class="humi">
+          <h5 id="city-humidity">Humidity</h5>
+          <img src="./humidity.png" alt="" id="img1">
+        </div>
+
+        <div class="wind">
+              <h5 id="city-wind">Wind</h5>
+            <img src="./wind.png" alt="" id="img2"/>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
