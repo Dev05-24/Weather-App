@@ -43,7 +43,7 @@ async function getData2(city) {
       weather_img.style = "background-image: url('./images/clear_bg.jpg'); object-fit: cover; background-repeat: no-repeat; background-size: cover;";
       break;
     case "Clouds":
-      weather_img.style = "background-image: url('./images/cloudy_bg.jpg'); object-fit: cover; background-repeat: no-repeat; background-size: cover; color: white";  
+      weather_img.style = "background-image: url('./images/cloudy_bg.jpg'); object-fit: cover; background-repeat: no-repeat; background-size: cover;";  
       break;
     case "Mist":
       weather_img.style = "background-image: url('./images/mist_bg.jpg'); object-fit: cover; background-repeat: no-repeat; background-size: cover;";
