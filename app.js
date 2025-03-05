@@ -11,7 +11,7 @@ let wind_img = document.getElementById("img2")
 
 async function getData2(city) {
   const api_key = "ce2e6aa3315e4fa7a143dc4298493e56";
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
 
   const weather_data = await fetch(`${url}`).then((Response) =>
     Response.json()
